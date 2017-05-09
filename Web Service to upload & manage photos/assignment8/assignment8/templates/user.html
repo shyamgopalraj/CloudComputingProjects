@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+</script>
+</head>
+<body>
+<h1> {{uname}} </h1>
+<br>
+<form  method="POST" action="/upload/" >
+<input type="hidden" name="uname" value="{{uname}}" />
+<input type="submit" value="Uploadfile">
+<br>
+</form>
+<form action="/displayAll/" >
+<input type="submit" value="Display all images">
+<br>
+</form>
+<form method="POST" action="/display" >
+<input type="hidden" name="uname" value="{{uname}}" />
+<input type="submit" value="Display your images">
+<br>
+</form>
+<form action="/displayonlyimages" >
+<input type="submit" value="Display only images">
+<br>
+</form>
+
+</body>
+</html>

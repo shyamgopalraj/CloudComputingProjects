@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>My first column chart by Highcharts</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+        <script type="text/javascript">
+        var pie_data = JSON.parse('{{ chartdata }}');
+        $(function () {
+
+            $('#container').highcharts({
+             chart: {
+                type: 'scatter'
+                },
+             title: {
+                text: 'K means cluster'
+        },
+        series: [{
+            name: 'scatter chart',
+            data: pie_data
+        }]
+    });
+});
+
+            $(function () {
+
+    $('#barcontainer').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'K means cluster'
+        },
+        series: [{
+            name: 'Bar chart',
+            data: pie_data
+        }]
+    });
+});
+            </script>
+
+    </head>
+    <body>
+
+        <!-- 3. Add the container -->
+        <div id="container" style="width: 600px; height: 400px; margin: 0 auto"></div>
+        <br><br><br><br><br><br><br>
+        <div id="barcontainer" style="width: 600px; height: 400px; margin: 0 auto"></div>
+
+    </body>
+</html>

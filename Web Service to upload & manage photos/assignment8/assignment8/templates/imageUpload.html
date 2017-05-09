@@ -1,0 +1,17 @@
+<html>
+<body>
+<form action="/upload/file/"
+            enctype="multipart/form-data"
+            method="POST">
+			<input type="hidden" name="uname" value="{{uname}}" />
+			<div>
+          <textarea name="comments" rows="3" cols="60"></textarea>
+        </div>
+        
+        <div><label>Upload image:</label></div>
+        <div><input type="file" name="file"/></div>
+        <div><input type="submit" value="Upload"></div>
+</form>
+      
+    </body>
+  </html>

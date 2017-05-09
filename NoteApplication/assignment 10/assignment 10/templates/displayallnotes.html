@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1>all notes displayed</h1>
+
+{% for dic in allnotesdisplayed %}
+        <ul>
+            <li><h3>{{dic["subject"]}}</h3></li>
+            <h3>{{dic["notes"]}}</h3>
+            <h3>{{dic["priority"]}}</h3>
+            <h3>{{dic["owner"]}}</h3>
+            <h3>--------------------</h3>
+            <br>
+        </ul>
+{% endfor %}
+<form  method="GET" action="/" >
+<input type="submit" value="logout">
+<br>
+</form>
+</body>
+</html>

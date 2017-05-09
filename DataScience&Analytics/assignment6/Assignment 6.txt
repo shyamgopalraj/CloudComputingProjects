@@ -1,0 +1,9 @@
+Machine Learning
+1. Using Weka, Python libraries, or Java libraries, which contain k-means cluster
+methods, try clustering your Map-Reduce output (using two dimensional data, or
+only two of the dimensions) into clusters of 3, 7, 10, and 20.
+Which give the best (most meaningful) result?
+
+Answer ----> As the present sample has more than 100,000 tuples as we increase the number of cluster we get more meaningful results. Having more cluster will lead to meaningful results when we have large number of records where as having more number of clutser will lead to clusters with less point thus making it less meaningful.
+
+SUBMITTED BY - SHYAMGOPAL RAJANNA (1001248518)

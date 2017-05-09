@@ -1,0 +1,12 @@
+<html>
+<body>
+<h3>Displaying all images</h3>
+<br>
+
+  {% for image in images %}
+    <img src="data:;base64,{{ image | safe}}" height="42" width="42"/>
+	<br>
+  {% endfor %}
+
+</body>
+</html>

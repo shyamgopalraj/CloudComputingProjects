@@ -1,0 +1,2 @@
+ ../hadoop-2.6.0/bin/hadoop jar ../hadoop-2.6.0/share/hadoop/tools/lib/hadoop-streaming-2.6.0.jar -file mapper.py -mapper "python $PWD/depth-mag-mapper.py" -file reducer.py -reducer "python $PWD/reducer.py" -Dmapred.map.tasks=2 -Dmapred.reduce.tasks=2 -input /quake -output /locmagOP_dm1:34 PM
+ -Dmapred.map.tasks=2 -Dmapred.reduce.tasks=2

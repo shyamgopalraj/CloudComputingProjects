@@ -1,0 +1,33 @@
+<html>
+<body>
+<h3>Displaying all images</h3>
+
+<br>
+ {%set c=0%}
+ {% for i in data %}
+     <div>
+      <img src="data:;base64,{{i['image']}}" height="42" width="42"/>
+	  <br>
+	  <form  method="POST" action="/removeimage/" >
+	  <input type="hidden" name="id" value="{{ i['_id'] }}" />
+	  <input type="submit" value="Remove Image">
+	  </form>
+	  <p>Comments:</p>
+	{% for comment in i['comments'][c] %}
+	   
+			<div style="width: 400px; height: 50px; overflow: auto;"><b>{{ i['uname'] }}</b>":"{{comment}}</div>
+	 
+	{%endfor%}
+	{%set c=c+1 %}
+	<form  method="POST" action="/addcomment/" >
+	<input type="hidden" name="fname" value="{{ i['filename'] }}" />
+	<input type="hidden" name="uname" value="{{ i['uname'] }}" />
+	<input type="text" name="comment" />
+	<input type="submit" value="Add comment">
+	</form>
+	
+     </div>
+
+ {% endfor %}
+</body>
+</html>

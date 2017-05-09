@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+			</td>
+			<td>
+				<h1>Best fares!</h1>
+
+                <ul>
+	                {% for i in range(0, resultList|count) %}
+	            	<div style="clear: both">
+	            	<h4> {{ resultList[i] }} </h4>
+	            	</div>
+	                {% endfor %}
+                </ul>
+
+              
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

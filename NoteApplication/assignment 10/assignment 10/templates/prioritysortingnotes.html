@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1>all sorted notes ascending order based on priority displayed</h1>
+
+{% for dic in notessorting %}
+        <ul>
+            <li><h3>priority --> {{dic["priority"]}}</h3></li>
+            <h3>{{dic["subject"]}}</h3>
+            <h3>{{dic["notes"]}}</h3>
+            <h3>{{dic["owner"]}}</h3>
+            <h3>--------------------</h3>
+            <br>
+        </ul>
+{% endfor %}
+<form  method="GET" action="/" >
+<input type="submit" value="logout">
+<br>
+</form>
+
+</body>
+</html>

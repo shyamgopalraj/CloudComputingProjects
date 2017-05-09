@@ -1,0 +1,9 @@
+azure-app deployed link -
+
+http://shyamazureapp.azurewebsites.net/
+
+Intial code for flask application of the web is present in ASSIGNMENT 10.
+
+here we able to scale up and scale down under the settings option of the web app deployed.
+
+submitted by - ShyamGopalRajanna(1001248518)

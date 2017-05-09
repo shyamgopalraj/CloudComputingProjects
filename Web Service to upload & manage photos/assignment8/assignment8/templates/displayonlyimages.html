@@ -1,0 +1,12 @@
+<html>
+<body>
+<h3>Displaying all images</h3>
+<br>
+
+  {% for i in allimages %}
+      <img src="data:;base64,{{i['image']}}" height="42" width="42"/>
+	<br>
+  {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+{% for dic in searchresults %}
+    {% if dic["type"] == "note"  %}
+        <ul>
+            <li><h3>{{dic["subject"]}}</h3></li>
+            <h3>{{dic["notes"]}}</h3>
+            <h3>{{dic["priority"]}}</h3>
+            <h3>{{dic["owner"]}}</h3>
+            <h3>--------------------</h3>
+            <br>
+        </ul>
+    {% else %}
+        <ul>
+            <li><img src="data:;base64,{{dic["pic"]}}" height="42" width="42"/></li>
+            <h3>{{dic["filename"]}}</h3>
+            <h3>{{dic["owner"]}}</h3>
+            <h3>{{dic["comment"]}}</h3>
+            <h3>{{dic["priority"]}}</h3>
+            <h3>--------------------</h3>
+            <br>
+        </ul>
+    {% endif %}
+{% endfor %}
+
+<form  method="GET" action="/" >
+<input type="submit" value="logout">
+</form>
+
+</body>
+</html>
